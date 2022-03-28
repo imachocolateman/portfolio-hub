@@ -6,6 +6,9 @@ All my projects and landing page
 Posted notes design. Each posted note opens up to a specific project. Posted notes of different sizes.
 Displaying the at times scattered nature of ideas generation
 
+### Bootstrap Edition
+Front end based on Bootstrap tutorial on freecodecamp
+
 ## Additions
 ---
 - Find Me map?
