@@ -16,9 +16,17 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from django.views.generic.base import RedirectView
+from django.conf.urls.static import static
+from django.conf import settings
+
+from projects.views import HomeView
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    path('', RedirectView.as_view(url='projects/'), name='redirect'),
+    path('home/', HomeView.as_view(), name="home"),
     path('projects/', include('projects.urls')),
-    path('', RedirectView.as_view(url='projects/', permanent=True)),
+    path('admin/', admin.site.urls),
 ]
+
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
