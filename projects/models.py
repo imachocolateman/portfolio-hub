@@ -5,7 +5,7 @@ from taggit.managers import TaggableManager
 
 # Create your models here.
 def project_directory_path(instance, filename):
-    # file will be uploaded to MEDIA_ROOT/user_<id>/<filename>
+    # file will be uploaded to MEDIA_ROOT/project_<slug>/<filename>
     return f'project_{instance.slug}/{filename}'
 
 class Project(models.Model):

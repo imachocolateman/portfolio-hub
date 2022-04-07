@@ -49,3 +49,13 @@
   vertical-align: -.125em;
   fill: currentColor;
 }
+
+/*
+ * Change Logo color
+ */
+.logo {
+  filter: invert(100%);
+  -webkit-filter: invert(100%);
+}
+
+
