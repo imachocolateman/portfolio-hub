@@ -2,13 +2,12 @@
 
 {% block title %}Projects{% endblock %}
 
+
 {% block content %}
 <h1>Project List</h1>
 
-<ul>
 	{% for project in object_list %}
-	<li><a href="{{ project.get_absolute_url }}">{{ project.title }}</li>
+		{% include 'projects/project_card.html' %}
 	{% endfor %}
-</ul>
 
 {% endblock %}

@@ -34,7 +34,9 @@ class Project(models.Model):
 
 	tag = TaggableManager()
 	bg_image = models.ImageField(upload_to=project_directory_path)
-	external_url = models.URLField(null=True)
+	external_url = models.URLField(null=True, blank=True)
+
+	featured = models.BooleanField(default=False)
 
 	def __str__(self):
 		return f"{self.id} | {self.title}"
@@ -46,4 +48,9 @@ class Project(models.Model):
 		if not self.slug:
 			self.slug = slugify(self.title)
 		super().save(*args, **kwargs)
+
+	class Meta:
+		get_latest_by = ['created_date']
+		ordering = ['-last_updated']
+
 

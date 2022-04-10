@@ -2,6 +2,19 @@
 
 {% block title %}Home{% endblock %}
 
-{% block content %}
+{% block welcome %}
+<div class="p-5 mb-4 bg-light rounded-3">
+	<div class="container-fluid py-5">
+		<h1 class="display-5 fw-bold">Welcome,</h1>
+		<p class="col-md-8 fs-4">These are the countless projects and ideas that have kept me up at night.</p>
+		<p class="col-md-8 fs-5">Many are still in the works and may never gain traction, while others are from a chapter in my life that I will likely never revisit, however all hold a special place in my heart</p>
+		<!-- <button class="btn btn-primary btn-lg" type="button">Example button</button> -->
+	</div>
+</div>
+{% endblock %}
 
+{% block content %}
+	{% for project in object_list %}
+		{% include 'projects/project_card.html' %}
+	{% endfor %}
 {% endblock %}

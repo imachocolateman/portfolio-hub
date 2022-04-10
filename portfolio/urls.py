@@ -22,10 +22,11 @@ from django.conf import settings
 from projects.views import HomeView
 
 urlpatterns = [
-    path('', RedirectView.as_view(url='projects/'), name='redirect'),
+    path('', RedirectView.as_view(url='home/'), name='redirect'),
     path('home/', HomeView.as_view(), name="home"),
     path('projects/', include('projects.urls')),
     path('admin/', admin.site.urls),
+    path('__debug__/', include('debug_toolbar.urls')),
 ]
 
 if settings.DEBUG:
