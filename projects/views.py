@@ -9,9 +9,19 @@ from .forms import ProjectForm
 # Create your views here.
 class ProjectListView(ListView):
 	model = Project
+	def get_context_data(self, **kwargs):
+		context = super().get_context_data(**kwargs)
+		context['latest_project'] = Project.objects.latest('created_date')
+		return context
+		
 
 class ProjectDetailView(DetailView):
 	model = Project
+
+	def get_context_data(self, **kwargs):
+		context = super().get_context_data(**kwargs)
+		context['latest_project'] = Project.objects.latest('created_date')
+		return context
 
 class CreateProjectView(CreateView):
 	model = Project
@@ -23,6 +33,7 @@ class HomeView(TemplateView):
 	template_name = "home.html"
 
 	def get_context_data(self, **kwargs):
-		context = super(HomeView, self).get_context_data(**kwargs)
+		context = super().get_context_data(**kwargs)
 		context['object_list'] = Project.objects.all()
+		context['latest_project'] = Project.objects.latest('created_date')
 		return context
