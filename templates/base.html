@@ -26,14 +26,14 @@
 </head>
 <body>
 
-  {% include 'header.html' %}
-  <main>
-  	<div>
-  		{% block welcome %}{% endblock %}
+{% include 'header.html' %}
+<main>
+	<div>
+		{% block welcome %}{% endblock %}
 
 	    {% block content %}{% endblock %}
-	  </div>
-	</main>
+	</div>
+</main>
 
   {% include 'footer.html' %}
 
