@@ -6,8 +6,8 @@ All my projects and landing page
 Posted notes design. Each posted note opens up to a specific project. Posted notes of different sizes.
 Displaying the at times scattered nature of ideas generation
 
-### Bootstrap Edition
-Front end based on Bootstrap tutorial on freecodecamp
+### Materialize Edition
+Front end based on Materialize tutorial on https://materializecss.com/getting-started.html
 
 ## Additions
 ---
@@ -17,7 +17,7 @@ Front end based on Bootstrap tutorial on freecodecamp
 
 ## To do:
 ---
-[] Header make logo centre on mobile view
-[] Change bootstrap view for Header 'Latest Project' to only dissapear on xsmall view
-[] Add spacing between cards vertically. Same padding as horizontal
-[] Optimize model and view as to not repeat yourself - i.e def get_context_data: context['latest project'] line is repeated
+- [] Header make logo centre on mobile view
+- [] Change bootstrap view for Header 'Latest Project' to only dissapear on xsmall view
+- [] Add spacing between cards vertically. Same padding as horizontal
+- [] Optimize model and view as to not repeat yourself - i.e def get_context_data: context['latest project'] line is repeated
