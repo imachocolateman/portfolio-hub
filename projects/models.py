@@ -30,7 +30,7 @@ class Project(models.Model):
 	last_updated = models.DateTimeField(auto_now=True, editable=False)
 
 	project_start_date = models.DateField()
-	project_end_date = models.DateField(blank=True)
+	project_end_date = models.DateField(blank=True, null=True)
 
 	tag = TaggableManager()
 	bg_image = models.ImageField(upload_to=project_directory_path)

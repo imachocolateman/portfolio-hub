@@ -14,7 +14,9 @@
 {% endblock %}
 
 {% block content %}
+<div class="card-group"> 
 	{% for project in object_list %}
 		{% include 'projects/project_card.html' %}
 	{% endfor %}
+</div>
 {% endblock %}
