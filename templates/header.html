@@ -1,11 +1,10 @@
 <!-- ======= Header ======= -->
 {% load static %}
-<header class="site-header sticky-top py-1">
-	<div class="container d-flex flex-column flex-md-row justify-content-between">
-		<a class="py-2" href="{% url 'home' %}">
-			<img src="{% static 'assets/img/funnel.png' %}" height="36" width="36" alt="Funnel" class="logo">
-		</a>
-		<a class="py-2 d-none d-md-inline-block navbar-brand" href="{{ latest_project.get_absolute_url }}">Latest Project: {{ latest_project.title }}</a>
-		<a class="py-2 d-none d-md-inline-block"></a>
+<header class="site-header">
+	<div class="container">
+		<div class="row">
+			<a class="col s12 m2 l2" href="{% url 'home' %}"><img src="{% static 'assets/img/funnel.png' %}" height="36" width="36" alt="Funnel" class="logo"></a>
+			<a class="col m8 l8 offset-m4" href="{{ latest_project.get_absolute_url }}">Latest Project: {{ latest_project.title }}</a>
+		</div>
 	</div>
 </header>

@@ -28,12 +28,10 @@
 
   {% include 'header.html' %}
   <main>
-  	<div class="container py-4">
+  	<div>
   		{% block welcome %}{% endblock %}
 
-	    <div class="row align-items-md-stretch">
-	    	{% block content %}{% endblock %}
-	    </div>
+	    {% block content %}{% endblock %}
 	  </div>
 	</main>
 
